@@ -100,3 +100,8 @@ ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido){
 
     return l;
 }
+
+float gerarMontante(Politico* p){
+    if(p != NULL)
+        return p->valorPropinaMensal * p->quantidadeVezes;
+}

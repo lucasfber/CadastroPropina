@@ -38,7 +38,7 @@
 
 1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido.h
 
-1468075402 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
+1468077623 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
 	<stdio.h>
 	"partido/partido.h"
 	"politico/lista_politico.h"
@@ -77,12 +77,12 @@
 	"partido.h"
 	<stdlib.h>
 
-1468075594 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
+1468077651 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
 	"lista_politico.h"
 	<stdlib.h>
 	<stdio.h>
 
-1468074984 /home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.h
+1468077071 /home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.h
 	"politico.h"
 
 1468072574 /home/lucas/trabalho-ed/CadastroPropina/politico/politico.h

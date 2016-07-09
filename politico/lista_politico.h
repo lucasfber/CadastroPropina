@@ -21,4 +21,5 @@ Politico* modificarPolitico(ListaPolitico* l,char* apelido,char* nNome,char* nAp
 
 ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido);
 
+float gerarMontante(Politico* p);
 #endif
