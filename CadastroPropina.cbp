@@ -36,6 +36,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lista_partido.h" />
+		<Unit filename="lista_politico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lista_politico.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

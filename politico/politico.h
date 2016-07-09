@@ -1,6 +1,6 @@
 #ifndef POLITICO_H
 #define POLITICO_H
-#include "partido.h"
+#include "../partido/partido.h"
 
 typedef struct politico{
     char* nome;

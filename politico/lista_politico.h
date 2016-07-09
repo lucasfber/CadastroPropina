@@ -19,5 +19,6 @@ Politico* buscarPolitico(ListaPolitico* l,char* apelido);
 
 Politico* modificarPolitico(ListaPolitico* l,char* apelido,char* nNome,char* nApelido,char* nCargo,Partido* nPartido,float nPropina,int nQtd);
 
+ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido);
 
 #endif

@@ -7,9 +7,15 @@ ListaPolitico* criarListaPolitico(){
 }
 
 ListaPolitico* inserirPolitico(ListaPolitico* l,Politico* p){
+    /*Dois politicos nao podem ter o mesmo apelido*/
     if(l != NULL){
-
+        Politico* politico = buscarPolitico(l,p->apelido);
+        if(politico != NULL){
+            printf("ERRO ! Já existe um político com esse mesmo apelido. Favor cadastrar um político com um apelido diferente!\n\n");
+            return l;
+        }
     }
+
     ListaPolitico* novo = (ListaPolitico*) malloc(sizeof(ListaPolitico));
     novo->politico = p;
     novo->prox = l;
@@ -60,3 +66,37 @@ Politico* modificarPolitico(ListaPolitico* l,char* apelido,char* nNome,char* nAp
     return NULL;
 }
 
+ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido){
+    ListaPolitico* ant = NULL;
+    ListaPolitico* exc = l;
+
+    while(exc != NULL && strcmp(exc->politico->apelido,apelido) != 0){
+        ant = exc;
+        exc = exc->prox;
+    }
+
+    /*chegou até o final da lista (NULL). Logo nao foi encontrado nenhum politico na lista com o apelido passado como parametro*/
+    if(exc == NULL)
+        return l;
+
+
+    Partido* partido;
+
+    /*Se ant == NULL, é porquê o Politico a ser excluído é o primeiro na lista*/
+    if(ant == NULL){
+        l = exc->prox;
+    }
+
+    else {
+        ant->prox = exc->prox;
+    }
+
+    /*Liberando o partido do político da memória*/
+    partido = exc->politico->partido;
+    free(partido);
+
+    /*Liberando o político da memoria*/
+    free(exc);
+
+    return l;
+}

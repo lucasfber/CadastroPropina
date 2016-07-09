@@ -38,10 +38,10 @@
 
 1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido.h
 
-1468052810 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
+1468075402 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
 	<stdio.h>
-	"partido.h"
-	"lista_politico.h"
+	"partido/partido.h"
+	"politico/lista_politico.h"
 
 1468052307 source:/home/lucas/trabalho-ed/CadastroPropina/partido.c
 	"partido.h"
@@ -61,4 +61,34 @@
 	"lista_politico.h"
 	<stdlib.h>
 	<stdio.h>
+
+1467859511 source:/home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.c
+	"lista_partido.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1468052151 /home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.h
+	"partido.h"
+
+1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido/partido.h
+
+1468052307 source:/home/lucas/trabalho-ed/CadastroPropina/partido/partido.c
+	"partido.h"
+	<stdlib.h>
+
+1468075594 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
+	"lista_politico.h"
+	<stdlib.h>
+	<stdio.h>
+
+1468074984 /home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.h
+	"politico.h"
+
+1468072574 /home/lucas/trabalho-ed/CadastroPropina/politico/politico.h
+	"../partido/partido.h"
+
+1468053041 source:/home/lucas/trabalho-ed/CadastroPropina/politico/politico.c
+	"politico.h"
+	<stdlib.h>
 
