@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1467858192 source:/home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lista_partido.h"
+
+1467856578 /home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/partido.h
+
+1467859071 /home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/lista_partido.h
+	"partido.h"
+
+1467856565 source:/home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/partido.c
+	"partido.h"
+	<stdlib.h>
+
+1467857360 source:/home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/lista_partido.c
+	"lista_partido.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1467307856 /home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/politico.h
+	"partido.h"
+
+1467307840 source:/home/lucas/Dropbox/UFC/9 Semestre/ED/trabalho-final/CadastroPropina/politico.c
+	"politico.h"
+	<stdlib.h>
+
+1467859511 source:/home/lucas/trabalho-ed/CadastroPropina/lista_partido.c
+	"lista_partido.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1468052151 /home/lucas/trabalho-ed/CadastroPropina/lista_partido.h
+	"partido.h"
+
+1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido.h
+
+1468052810 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
+	<stdio.h>
+	"partido.h"
+	"lista_politico.h"
+
+1468052307 source:/home/lucas/trabalho-ed/CadastroPropina/partido.c
+	"partido.h"
+	<stdlib.h>
+
+1468053041 source:/home/lucas/trabalho-ed/CadastroPropina/politico.c
+	"politico.h"
+	<stdlib.h>
+
+1468053022 /home/lucas/trabalho-ed/CadastroPropina/politico.h
+	"partido.h"
+
+1468052345 /home/lucas/trabalho-ed/CadastroPropina/lista_politico.h
+	"politico.h"
+
+1468053077 source:/home/lucas/trabalho-ed/CadastroPropina/lista_politico.c
+	"lista_politico.h"
+	<stdlib.h>
+	<stdio.h>
+
