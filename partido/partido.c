@@ -16,3 +16,12 @@ Partido* instaciarPartido(){
 
     return partido;
 }
+
+void exibirPartido(Partido* p){
+    system("clear");
+    printf("=================================================================================\n");
+    printf("NOME DO PARTIDO: %s\n",p->nome);
+	printf("SIGLA: %s\n",p->sigla);
+    printf("=================================================================================\n");
+
+}

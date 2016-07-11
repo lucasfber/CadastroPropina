@@ -1,8 +1,9 @@
 #ifndef TELA_H
 #define TELA_H
 #include "../politico/lista_politico.h"
+#include "../partido/lista_partido.h"
 
-int mostrarMenuPrincipal(ListaPolitico* listaPoliticos);
+int mostrarMenuPrincipal();
 
 int mostrarMenuPolitico(ListaPolitico* listaPoliticos);
 
@@ -25,8 +26,16 @@ void mostrarOpcoesMontante();
 
 
 
-void mostrarMenuPartido();
 
+int mostrarMenuPartido(ListaPartido* l);
+
+ListaPartido* telaCadastrarPartido(ListaPartido* lista);
+
+ListaPartido* telaExcluirPartido(ListaPartido* l);
+
+void telabuscarPartido(ListaPartido* l);
+
+void telaGerarMontante(ListaPartido* lPart,ListaPolitico* lPol);
 
 void mostrarTelaSaida();
 

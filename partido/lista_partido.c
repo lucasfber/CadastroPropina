@@ -16,11 +16,12 @@ ListaPartido* inserirPartido(ListaPartido* l,Partido* p){
 }
 
 void listarPartidos(ListaPartido* l){
-
+    printf("===================LISTA DOS PARTIDOS CADASTRADOS===================\n\n");
     while(l != NULL){
         printf("Nome do Partido: %s\nSigla do Partido: %s\n\n", l->partido->nome, l->partido->sigla);
         l = l->prox;
     }
+
 }
 
 Partido* buscarPartido(ListaPartido* l,char* sigla){

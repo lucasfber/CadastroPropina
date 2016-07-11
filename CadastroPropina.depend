@@ -38,7 +38,7 @@
 
 1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido.h
 
-1468203665 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
+1468273884 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
 	<stdio.h>
 	"partido/partido.h"
 	"politico/lista_politico.h"
@@ -65,7 +65,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1467859511 source:/home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.c
+1468259478 source:/home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.c
 	"lista_partido.h"
 	<stdlib.h>
 	<string.h>
@@ -76,11 +76,11 @@
 
 1468163512 /home/lucas/trabalho-ed/CadastroPropina/partido/partido.h
 
-1468163566 source:/home/lucas/trabalho-ed/CadastroPropina/partido/partido.c
+1468259774 source:/home/lucas/trabalho-ed/CadastroPropina/partido/partido.c
 	"partido.h"
 	<stdlib.h>
 
-1468200969 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
+1468258969 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
 	"lista_politico.h"
 	<stdlib.h>
 	<stdio.h>
@@ -102,22 +102,26 @@
 1468095599 source:/home/lucas/trabalho-ed/CadastroPropina/tela.c
 	"tela.h"
 
-1468203004 source:/home/lucas/trabalho-ed/CadastroPropina/telas/tela.c
+1468273918 source:/home/lucas/trabalho-ed/CadastroPropina/telas/tela.c
 	"tela.h"
 	<stdlib.h>
 
-1468202371 /home/lucas/trabalho-ed/CadastroPropina/telas/tela.h
+1468270927 /home/lucas/trabalho-ed/CadastroPropina/telas/tela.h
 	"../politico/lista_politico.h"
+	"../partido/lista_partido.h"
 
 1468100349 /home/lucas/trabalho-ed/CadastroPropina/enums.h
 
 1468100349 /home/lucas/trabalho-ed/CadastroPropina/util/enums.h
 
-1468184860 /home/lucas/trabalho-ed/CadastroPropina/util/arquivo.h
+1468269806 /home/lucas/trabalho-ed/CadastroPropina/util/arquivo.h
 	"../politico/lista_politico.h"
+	"../partido/lista_partido.h"
 	<stdio.h>
 
-1468184854 source:/home/lucas/trabalho-ed/CadastroPropina/util/arquivo.c
+1468271476 source:/home/lucas/trabalho-ed/CadastroPropina/util/arquivo.c
 	"arquivo.h"
 	"../politico/politico.h"
+	"../partido/lista_partido.h"
+	"../partido/partido.h"
 

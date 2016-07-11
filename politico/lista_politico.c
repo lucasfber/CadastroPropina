@@ -41,7 +41,6 @@ ListaPolitico* inserirPolitico(ListaPolitico* l,Politico* p){
 }
 
 void listarPoliticos(ListaPolitico* l){
-    int op;
 
     printf("========================================LISTA DE POLÍTICOS ODEBRECHT====================================\n\n");
     while(l != NULL){

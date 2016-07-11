@@ -1,7 +1,7 @@
 #include "tela.h"
 #include <stdlib.h>
 
-int mostrarMenuPrincipal(ListaPolitico* listaPoliticos){
+int mostrarMenuPrincipal(){
 	printf("\n\t ================================================\n");
 	printf("\t|	  CADASTRO DE PROPINA - ODEBRECHT	 |\n");
 	printf("\t|						 |\n");
@@ -16,7 +16,7 @@ int mostrarMenuPrincipal(ListaPolitico* listaPoliticos){
 	printf("\t|						 |\n");
 	printf("\t ================================================\n");
 
-	int opcao = 3;
+    int opcao;
 	scanf("%d", &opcao);
 
 //    do{}while()
@@ -140,7 +140,7 @@ ListaPolitico* telaCadastrarPolitico(ListaPolitico* listaPoliticos){
     return listaPoliticos;
 }
 
-void mostrarMenuPartido(){
+int mostrarMenuPartido(ListaPartido* l){
 	printf("\n\t ================================================\n");
 	printf("\t|	  CADASTRO DE PROPINA - ODEBRECHT	 |\n");
 	printf("\t|\t\t   MENU PARTIDO	                 |\n");
@@ -153,7 +153,8 @@ void mostrarMenuPartido(){
 	printf("\t|\t3 - LISTAR PARTIDOS			 |\n");
 	printf("\t|\t4 - BUSCAR PARTIDO			 |\n");
 	printf("\t|\t5 - MODIFICAR PARTIDO			 |\n");
-	printf("\t|\t6 - GERAR MONTANTE			 |\n");
+	printf("\t|\t6 - GERAR MONTANTE POR PARTIDO           |\n");
+	printf("\t|\t7 - GERAR MONTANTE PAGO POR MES          |\n");
 	printf("\t|						 |\n");
 	printf("\t|\t9 - VOLTAR			 	 |\n");
 	printf("\t|\t0 - SAIR			 	 |\n");
@@ -163,26 +164,9 @@ void mostrarMenuPartido(){
 	printf("\t ================================================\n");
 
 	int opcao;
-	scanf("%d", &opcao);
+	scanf(" %d", &opcao);
 
-	switch(opcao){
-		case 1: system("clear");
-//				mostrarMenuPolitico();
-				break;
-
-		case 2: system("clear");
-				mostrarMenuPartido();
-				break;
-
-		case 9: system("clear");
-				//mostrarMenuPrincipal();
-				break;
-
-		case 0: system("clear");
-				mostrarTelaSaida();
-				exit(1);
-	}
-
+	return opcao;
 }
 
 void mostrarOpcoesMontante(){
@@ -402,7 +386,7 @@ ListaPolitico* telaModificarPolitico(ListaPolitico* listaPoliticos){
     char sair;
     scanf("%c",sair);
     system("clear");
-
+    return listaPoliticos;
 }
 
 void telaMontantePolitico(ListaPolitico* listaPoliticos){
@@ -535,4 +519,244 @@ char* menuListarPoliticoPartido(){
 //
 //    system("clear");
 //    mostrarMenuPolitico(l);
+}
+
+ListaPartido* telaCadastrarPartido(ListaPartido* lista){
+    printf("DIGITE O NOME DO PARTIDO QUE DESEJA CADASTRAR: ");
+    char* nomePartido = malloc(sizeof(char));
+    scanf(" %[^\n]", nomePartido);
+
+    printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA CADASTRAR: ");
+    char* siglaPartido = malloc(sizeof(char));
+    scanf(" %[^\n]", siglaPartido);
+
+    lista = inserirPartido(lista,criarPartido(nomePartido,siglaPartido));
+
+    printf("PARTIDO %s CADASTRADO COM SUCESSO !\n",nomePartido);
+
+    //confirmacaoSaida();
+
+    return lista;
+}
+
+ListaPartido* telaExcluirPartido(ListaPartido* l){
+    printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA EXCLUIR: ");
+    char* siglaPartido = malloc(sizeof(char));
+    scanf(" %[^\n]", siglaPartido);
+
+    Partido* p = buscarPartido(l,siglaPartido);
+
+    while(p == NULL){
+        int op;
+        printf("NÃO FOI ENCONTRADO NENHUM POLÍTICO COM ESSA SIGLA\n");
+        printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+        scanf("%d", &op);
+
+        while(op != 1 && op != 0){
+            printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+            scanf("%d", &op);
+        }
+
+        if(op == 0)
+            return l;
+
+        printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA EXCLUIR: ");
+        char* siglaPartido = malloc(sizeof(char));
+        scanf(" %[^\n]", siglaPartido);
+
+        p = buscarPartido(l,siglaPartido);
+    }
+
+    l = excluirPartido(l,p->sigla);
+
+    printf("\nPARTIDO EXCLUIDO COM SUCESSO !\n");
+    //confirmacaoSaida();
+
+    return l;
+}
+
+void telabuscarPartido(ListaPartido* l){
+    printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA ENCONTRAR: ");
+    char* siglaPartido = malloc(sizeof(char));
+    scanf(" %[^\n]", siglaPartido);
+
+    Partido* p = buscarPartido(l,siglaPartido);
+
+    while(p == NULL){
+        int op;
+        printf("NÃO FOI ENCONTRADO NENHUM POLÍTICO COM ESSA SIGLA\n");
+        printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+        scanf("%d", &op);
+
+        while(op != 1 && op != 0){
+            printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+            scanf("%d", &op);
+        }
+
+        if(op == 0)
+            return;
+
+        printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA BUSCAR: ");
+        char* siglaPartido = malloc(sizeof(char));
+        scanf(" %[^\n]", siglaPartido);
+
+        printf("PARTIDO ENCONTADO:\n");
+        p = buscarPartido(l,siglaPartido);
+    }
+
+    exibirPartido(p);
+
+    confirmacaoSaida();
+    system("clear");
+
+}
+
+ListaPartido* telaModificarPartido(ListaPartido* l){
+    printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA MODIFICAR: ");
+    char* siglaPartido = malloc(sizeof(char));
+    scanf(" %[^\n]", siglaPartido);
+
+    Partido* p = buscarPartido(l,siglaPartido);
+
+    while(p == NULL){
+        int op;
+        printf("NÃO FOI ENCONTRADO NENHUM POLÍTICO COM ESSA SIGLA\n");
+        printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+        scanf("%d", &op);
+
+        while(op != 1 && op != 0){
+            printf("\nDIGITE 1 - TENTAR NOVAMENTE 0 - SAIR\n");
+            scanf("%d", &op);
+        }
+
+        if(op == 0)
+            return l;
+
+        printf("DIGITE A SIGLA DO PARTIDO QUE DESEJA MODIFICAR: ");
+        char* siglaPartido = malloc(sizeof(char));
+        scanf(" %[^\n]", siglaPartido);
+
+        p = buscarPartido(l,siglaPartido);
+    }
+    printf("PARTIDO ENCONTRADO\n");
+
+    exibirPartido(p);
+    printf("\nDIGITE O NOVO NOME PARA O PARTIDO\n");
+    char* novoNome = (char*) malloc(sizeof(char));
+    scanf(" %[^\n]", novoNome);
+
+    printf("\nDIGITE A NOVA SIGLA PARA O PARTIDO\n");
+    char* novaSigla = (char*) malloc(sizeof(char));
+    scanf(" %[^\n]", novaSigla);
+
+    modificarPartido(l,p->sigla,novoNome,novaSigla);
+
+    confirmacaoSaida();
+    system("clear");
+
+    return l;
+}
+
+void telaGerarMontante(ListaPartido* lPart,ListaPolitico* lPol){
+    Partido* p;
+    printf("\nDIGITE A SIGLA DO PARTIDO DO QUAL DESEJA GERAR A MONTANTE: ");
+    char* sigla = (char*) malloc(sizeof(char));
+    scanf(" %[^\n]", sigla);
+
+    p = buscarPartido(lPart,sigla);
+
+    while(p == NULL){
+        system("clear");
+        printf("\n====================================================================\n");
+        printf("\nNÃO FOI ENCONTRADO NENHUM PARTIDO COM ESSA SIGLA! \n6 - TENTAR NOVAMENTE\n0 - SAIR\n");
+        int op;
+        scanf("%d",&op);
+
+        while(op != 0 && op != 6){
+            system("clear");
+            printf("\nNÃO FOI ENCONTRADO NENHUM PARTIDO COM ESSA SIGLA! \n6 - TENTAR NOVAMENTE\n0 - SAIR\n");
+            scanf("%d",&op);
+        }
+
+        if(op == 0){
+            return;
+        }
+
+        if(op == 6){
+            system("clear");
+            printf("\nDIGITE A SIGLA DO PARTIDO DO QUAL DESEJA GERAR A MONTANTE: ");
+            char* siglaPartido = (char*) malloc(sizeof(char));
+            scanf(" %[^\n]", siglaPartido);
+            p = buscarPartido(lPart,siglaPartido);
+        }
+
+    }
+
+    exibirPartido(p);
+    printf("Ainda venho até aqui\n");
+    printf("MONTANTE PAGA AO PARTIDO %s\nVALOR: R$ %.2f\n",p->nome, gerarMontantePorPartido(lPol,p->sigla));
+
+    confirmacaoSaida();
+    system("clear");
+
+}
+
+void telaGerarMontantePorMes(ListaPartido* lPart,ListaPolitico* lPol){
+    Partido* p;
+    printf("\nDIGITE A SIGLA DO PARTIDO DO QUAL DESEJA GERAR A MONTANTE: ");
+    char* sigla = (char*) malloc(sizeof(char));
+    scanf(" %[^\n]", sigla);
+
+    p = buscarPartido(lPart,sigla);
+
+    while(p == NULL){
+        system("clear");
+        printf("\n====================================================================\n");
+        printf("\nNÃO FOI ENCONTRADO NENHUM PARTIDO COM ESSA SIGLA! \n6 - TENTAR NOVAMENTE\n0 - SAIR\n");
+        int op;
+        scanf("%d",&op);
+
+        while(op != 0 && op != 6){
+            system("clear");
+            printf("\nNÃO FOI ENCONTRADO NENHUM PARTIDO COM ESSA SIGLA! \n6 - TENTAR NOVAMENTE\n0 - SAIR\n");
+            scanf("%d",&op);
+        }
+
+        if(op == 0){
+            return;
+        }
+
+        if(op == 6){
+            system("clear");
+            printf("\nDIGITE A SIGLA DO PARTIDO DO QUAL DESEJA GERAR A MONTANTE: ");
+            char* siglaPartido = (char*) malloc(sizeof(char));
+            scanf(" %[^\n]", siglaPartido);
+            p = buscarPartido(lPart,siglaPartido);
+        }
+
+    }
+
+    exibirPartido(p);
+
+    printf("DIGITE O MÊS QUE DESEJA CALCULAR A MONTANTE QUE FOI PAGA AO PARTIDO %s:\n",p->sigla);
+    printf("1 - JANEIRO\t\t7 - JULHO\n");
+    printf("2 - FEVEREIRO\t\t8 - AGOSTO\n");
+    printf("3 - MARÇO\t\t9 - SETEMBRO\n");
+    printf("4 - ABRIL\t\t10 - OUTUBRO\n");
+    printf("5 - MAIO\t\t11 - NOVEMBRO\n");
+    printf("6 - JUNHO\t\t12 - DEZEMBRO\n");
+    int mesMontante;
+    scanf("%d",&mesMontante);
+
+    printf("MONTANTE PAGA AO PARTIDO %s\nVALOR: ATÉ O MES %d\nVALOR: R$ %.2f\n",p->nome,mesMontante,gerarMontantePorMes(lPol,p->sigla,mesMontante));
+
+    confirmacaoSaida();
+    system("clear");
+
+}
+
+void confirmacaoSaida(){
+    int s;
+    printf("\nDIGITE 1 PARA SAIR: ");
+    scanf("%d",&s);
 }

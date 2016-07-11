@@ -1,46 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="politico/politico.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="politico/politico.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="372" topLine="0" />
+			<Cursor1 position="1090" topLine="17" />
 		</Cursor>
 	</File>
-	<File name="telas/tela.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1918" topLine="24" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="84" />
-			<Collapse line="143" />
-			<Collapse line="188" />
-			<Collapse line="207" />
-		</Folding>
-	</File>
-	<File name="politico/politico.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="646" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="318" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="partido/lista_partido.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1027" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="util/arquivo.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="196" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="partido/partido.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="partido/partido.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="181" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="util/arquivo.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="262" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="politico/politico.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="372" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="partido/lista_partido.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -48,29 +26,61 @@
 			<Cursor1 position="0" topLine="39" />
 		</Cursor>
 	</File>
-	<File name="util/arquivo.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="452" topLine="0" />
+			<Cursor1 position="2429" topLine="57" />
 		</Cursor>
+	</File>
+	<File name="util/arquivo.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="520" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="telas/tela.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="478" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="telas/tela.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15131" topLine="59" />
+		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="38" />
+			<Collapse line="99" />
+			<Collapse line="142" />
+			<Collapse line="187" />
+			<Collapse line="206" />
+			<Collapse line="224" />
+			<Collapse line="250" />
+			<Collapse line="316" />
+			<Collapse line="464" />
+			<Collapse line="504" />
+		</Folding>
+	</File>
+	<File name="politico/lista_politico.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="442" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="politico/lista_politico.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2173" topLine="105" />
+		</Cursor>
+		<Folding>
+			<Collapse line="8" />
+			<Collapse line="25" />
+		</Folding>
 	</File>
 	<File name="partido/partido.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="344" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="telas/tela.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="partido/lista_partido.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="43" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="politico/lista_politico.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4663" topLine="122" />
-		</Cursor>
-	</File>
-	<File name="politico/lista_politico.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="98" topLine="0" />
+			<Cursor1 position="1027" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
