@@ -38,10 +38,13 @@
 
 1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido.h
 
-1468077623 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
+1468203665 source:/home/lucas/trabalho-ed/CadastroPropina/main.c
 	<stdio.h>
 	"partido/partido.h"
 	"politico/lista_politico.h"
+	"telas/tela.h"
+	"util/enums.h"
+	"util/arquivo.h"
 
 1468052307 source:/home/lucas/trabalho-ed/CadastroPropina/partido.c
 	"partido.h"
@@ -68,27 +71,53 @@
 	<string.h>
 	<stdio.h>
 
-1468052151 /home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.h
+1468097596 /home/lucas/trabalho-ed/CadastroPropina/partido/lista_partido.h
 	"partido.h"
 
-1468052289 /home/lucas/trabalho-ed/CadastroPropina/partido/partido.h
+1468163512 /home/lucas/trabalho-ed/CadastroPropina/partido/partido.h
 
-1468052307 source:/home/lucas/trabalho-ed/CadastroPropina/partido/partido.c
+1468163566 source:/home/lucas/trabalho-ed/CadastroPropina/partido/partido.c
 	"partido.h"
 	<stdlib.h>
 
-1468077651 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
+1468200969 source:/home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.c
 	"lista_politico.h"
 	<stdlib.h>
 	<stdio.h>
 
-1468077071 /home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.h
+1468196887 /home/lucas/trabalho-ed/CadastroPropina/politico/lista_politico.h
 	"politico.h"
+	"../util/enums.h"
 
-1468072574 /home/lucas/trabalho-ed/CadastroPropina/politico/politico.h
+1468163437 /home/lucas/trabalho-ed/CadastroPropina/politico/politico.h
 	"../partido/partido.h"
 
-1468053041 source:/home/lucas/trabalho-ed/CadastroPropina/politico/politico.c
+1468191745 source:/home/lucas/trabalho-ed/CadastroPropina/politico/politico.c
 	"politico.h"
 	<stdlib.h>
+
+1468094037 /home/lucas/trabalho-ed/CadastroPropina/tela.h
+	"politico/lista_politico.h"
+
+1468095599 source:/home/lucas/trabalho-ed/CadastroPropina/tela.c
+	"tela.h"
+
+1468203004 source:/home/lucas/trabalho-ed/CadastroPropina/telas/tela.c
+	"tela.h"
+	<stdlib.h>
+
+1468202371 /home/lucas/trabalho-ed/CadastroPropina/telas/tela.h
+	"../politico/lista_politico.h"
+
+1468100349 /home/lucas/trabalho-ed/CadastroPropina/enums.h
+
+1468100349 /home/lucas/trabalho-ed/CadastroPropina/util/enums.h
+
+1468184860 /home/lucas/trabalho-ed/CadastroPropina/util/arquivo.h
+	"../politico/lista_politico.h"
+	<stdio.h>
+
+1468184854 source:/home/lucas/trabalho-ed/CadastroPropina/util/arquivo.c
+	"arquivo.h"
+	"../politico/politico.h"
 

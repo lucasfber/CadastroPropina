@@ -31,26 +31,34 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="arquivos.h" />
-		<Unit filename="lista_partido.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lista_partido.h" />
-		<Unit filename="lista_politico.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lista_politico.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="partido.c">
+		<Unit filename="partido/lista_partido.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="partido.h" />
-		<Unit filename="politico.c">
+		<Unit filename="partido/lista_partido.h" />
+		<Unit filename="partido/partido.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="politico.h" />
+		<Unit filename="partido/partido.h" />
+		<Unit filename="politico/lista_politico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="politico/lista_politico.h" />
+		<Unit filename="politico/politico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="politico/politico.h" />
+		<Unit filename="telas/tela.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="telas/tela.h" />
+		<Unit filename="util/arquivo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util/arquivo.h" />
+		<Unit filename="util/enums.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

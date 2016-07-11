@@ -26,4 +26,5 @@ Partido* modificarPartido(ListaPartido* l,char* sigla, char* novoNome, char* nov
 e l sem modificações caso contrário*/
 ListaPartido* excluirPartido(ListaPartido* l,char* sigla);
 
+
 #endif

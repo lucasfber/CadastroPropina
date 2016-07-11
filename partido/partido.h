@@ -8,4 +8,5 @@ typedef struct partido{
 
 Partido* criarPartido(char* nome,char* sigla);
 
+Partido* instaciarPartido();
 #endif // PARTIDO_H

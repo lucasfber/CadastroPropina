@@ -1,6 +1,7 @@
 #ifndef LISTA_POLITICO_H
 #define LISTA_POLITICO_H
 #include "politico.h"
+#include "../util/enums.h"
 
 typedef struct lista_politico{
     Politico* politico;
@@ -8,6 +9,8 @@ typedef struct lista_politico{
 }ListaPolitico;
 
 ListaPolitico* criarListaPolitico();
+
+ListaPolitico* compararInserirPolitico(ListaPolitico* l, ListaPolitico* l2, Politico* p);
 
 ListaPolitico* inserirPolitico(ListaPolitico* l,Politico* p);
 
@@ -22,4 +25,9 @@ Politico* modificarPolitico(ListaPolitico* l,char* apelido,char* nNome,char* nAp
 ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido);
 
 float gerarMontante(Politico* p);
+
+float gerarMontantePorPartido(ListaPolitico* p,char* siglaPartido);
+
+float gerarMontantePorMes(ListaPolitico* l,char* siglaPartido,Mes mes);
+
 #endif

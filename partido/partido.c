@@ -9,3 +9,10 @@ Partido* criarPartido(char* nome, char* sigla){
     return p;
 }
 
+Partido* instaciarPartido(){
+    Partido* partido = (Partido*) malloc(sizeof(Partido));
+    partido->nome = malloc(sizeof(char));
+    partido->sigla = malloc(sizeof(char));
+
+    return partido;
+}

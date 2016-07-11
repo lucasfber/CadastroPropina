@@ -13,4 +13,5 @@ typedef struct politico{
 
 Politico* criarPolitico(char* nomeCompleto,char* apelido,Partido* part,char* cargo,float propina,int quantidade);
 
+Politico* instanciarPolitico(Partido* partido);
 #endif

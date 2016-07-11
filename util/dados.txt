@@ -1,0 +1,7 @@
+
+Jackson Freitas;Jackin da Merenda;Laranja;4500.00;2;Partido da Causa LGBT;PCLGBT
+Joe;Tera;Governador;12200.00;1;Partido ZZ;PZZ
+Lucas;Bertoldo;Governador;12200.00;3;Partido X;PX
+Aecio Neves;snow;Senador;1000000.00;1;Partido Social Democrático Brasileiro;PSDB
+Nestor Cerveró;Lindinho;Diretor;500000.00;2;Partido dos Malas;PM
+Jose Genoino;Genoino;Deputado;300000.00;3;Partido dos Trabalhadores;PT

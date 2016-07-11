@@ -6,6 +6,23 @@ ListaPolitico* criarListaPolitico(){
     return NULL;
 }
 
+ListaPolitico* compararInserirPolitico(ListaPolitico* l1, ListaPolitico* l2, Politico* p){
+    /*Dois politicos nao podem ter o mesmo apelido*/
+    if(l1 != NULL){
+        Politico* politico = buscarPolitico(l1,p->apelido);
+        if(politico != NULL){
+            printf("ERRO ! Já existe um político com esse mesmo apelido. Favor cadastrar um político com um apelido diferente!\n\n");
+            return l2;
+        }
+    }
+
+    ListaPolitico* novo = (ListaPolitico*) malloc(sizeof(ListaPolitico));
+    novo->politico = p;
+    novo->prox = l2;
+
+    return novo;
+}
+
 ListaPolitico* inserirPolitico(ListaPolitico* l,Politico* p){
     /*Dois politicos nao podem ter o mesmo apelido*/
     if(l != NULL){
@@ -24,19 +41,39 @@ ListaPolitico* inserirPolitico(ListaPolitico* l,Politico* p){
 }
 
 void listarPoliticos(ListaPolitico* l){
+    int op;
+
+    printf("========================================LISTA DE POLÍTICOS ODEBRECHT====================================\n\n");
     while(l != NULL){
-        printf("Nome: %s\nApelido: %s\nCargo: %s\nPartido: %s - %s\nPropina Mensal: R$ %.2f\nQuantidade de Vezes: %d\n\n",l->politico->nome,l->politico->apelido,l->politico->cargo,l->politico->partido->nome,l->politico->partido->sigla,l->politico->valorPropinaMensal,l->politico->quantidadeVezes);
+            printf("=================================================================================\n");
+            printf("    NOME: %s\n    APELIDO: %s\n    CARGO: %s\n",l->politico->nome,l->politico->apelido,l->politico->cargo);
+            printf("    PARTIDO: %s\n    SIGLA: %s\n",l->politico->partido->nome,l->politico->partido->sigla);
+            printf("    VALOR DA PROPINA MENSAL: R$ %.2f\n    QUANTIDADE DE VEZES PAGAS: %d\n",l->politico->valorPropinaMensal,l->politico->quantidadeVezes);
+            printf("=================================================================================\n");
         l = l->prox;
     }
+    char enter;
+    printf("PRESSIONE S PARA SAIR\n");
+    scanf(" %c", &enter);
+    system("clear");
 }
 
 void listarPoliticosPorPartido(ListaPolitico* l,char* sigla){
     while(l != NULL){
         if(strcmp(l->politico->partido->sigla,sigla) == 0){
-            printf("Nome: %s\nApelido: %s\nCargo: %s\nPartido: %s - %s\nPropina Mensal: R$ %.2f\nQuantidade de Vezes: %d\n\n",l->politico->nome,l->politico->apelido,l->politico->cargo,l->politico->partido->nome,l->politico->partido->sigla,l->politico->valorPropinaMensal,l->politico->quantidadeVezes);
+            printf("=================================================================================\n");
+            printf("    NOME: %s\n    APELIDO: %s\n    CARGO: %s\n",l->politico->nome,l->politico->apelido,l->politico->cargo);
+            printf("    PARTIDO: %s\n    SIGLA: %s\n",l->politico->partido->nome,l->politico->partido->sigla);
+            printf("    VALOR DA PROPINA MENSAL: R$ %.2f\n    QUANTIDADE DE VEZES PAGAS: %d\n",l->politico->valorPropinaMensal,l->politico->quantidadeVezes);
+            printf("=================================================================================\n");
         }
         l = l->prox;
     }
+
+    char enter;
+    printf("PRESSIONE S PARA SAIR\n");
+    scanf(" %c", &enter);
+    system("clear");
 }
 
 Politico* buscarPolitico(ListaPolitico* l,char* apelido){
@@ -104,4 +141,37 @@ ListaPolitico* excluirPolitico(ListaPolitico* l,char* apelido){
 float gerarMontante(Politico* p){
     if(p != NULL)
         return p->valorPropinaMensal * p->quantidadeVezes;
+}
+
+float gerarMontantePorPartido(ListaPolitico* p,char* siglaPartido){
+    float montantePartido = 0;
+    ListaPolitico* l = p;
+    while(l != NULL){
+        if(strcmp(l->politico->partido->sigla,siglaPartido) == 0){
+            montantePartido += gerarMontante(l->politico);
+        }
+        l = l->prox;
+    }
+
+    return montantePartido;
+}
+
+float gerarMontantePorMes(ListaPolitico* l,char* siglaPartido,Mes mes){
+    ListaPolitico* p = l;
+    float montantePaga = 0;
+
+    while(p != NULL){
+       if(strcmp(p->politico->partido->sigla,siglaPartido) == 0){
+            if(p->politico->quantidadeVezes < mes){
+                montantePaga += gerarMontante(p->politico);
+            }
+            else{
+                montantePaga = montantePaga + (p->politico->valorPropinaMensal * mes);
+            }
+       }
+
+       p = p->prox;
+    }
+
+    return montantePaga;
 }
